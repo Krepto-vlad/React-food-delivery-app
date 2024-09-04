@@ -1,3 +1,6 @@
+import { ShoppingList } from './ShoppingList.tsx'
+
+
 
 function MyButton() {
     return (
@@ -18,11 +21,7 @@ export default function MyApp() {
             <h1>{user.name}</h1>
            <pre style={{
             whiteSpace: "pre-wrap"
-           }}>jsdkhjsdk
-                sda
-                fsdfsffsdolfosd
-                dfsfpsdfops
-                sfsdf
+           }}>list of products
 
 
                 </pre>
@@ -42,25 +41,4 @@ export default function MyApp() {
     )
 }
 
-const products = [
-  { title: 'Cabbage', isFruit: false, id: 1 },
-  { title: 'Garlic', isFruit: false, id: 2 },
-  { title: 'Apple', isFruit: true, id: 3 },
-];
 
-export function ShoppingList() {
-  const listItems = products.map(product =>
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? 'magenta' : 'darkgreen'
-      }}
-    >
-      {product.title}
-    </li>
-  );
-
-  return (
-    <ul>{listItems}</ul>
-  );
-}
