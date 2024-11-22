@@ -1,44 +1,17 @@
-import { ShoppingList } from './ShoppingList.tsx'
+import Header from './components/header/header';
+import Body from './components/body/body';
+import Footer from './components/footer/footer';
 
-
-
-function MyButton() {
-    return (
-        <button>Im a button</button>
-    )
-}
-
-const user = {
-    name: "Alex",
-    imageUrl: 'https://twitter.com/img',
-    imageSize: 90,
-};
 
 
 export default function MyApp() {
     return (
         <>
-            <h1>{user.name}</h1>
-           <pre style={{
-            whiteSpace: "pre-wrap"
-           }}>list of products
-
-
-                </pre>
-  
-            <img
-            className= "avatar" src=""
-            alt={"photo of" + user.name}
-            style={{    
-                width: user.imageSize,
-                height: user.imageSize,
-                marginRight: 100}}
-            />
-            <MyButton /> 
-            <ShoppingList />
+            <Header />
+            <Body />
+            <Footer />
         </>
         
     )
 }
-
 
